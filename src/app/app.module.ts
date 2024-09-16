@@ -3,6 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderModule } from './header/header.module';
+import { RestaurantlistingModule } from './restaurantlisting/restaurantlisting.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FoodCatalogueModule } from './food-catalogue/food-catalogue.module';
+import { OrderSummaryModule } from './order-summary/order-summary.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +15,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HeaderModule,
+    RestaurantlistingModule,
+    HttpClientModule,
+    FoodCatalogueModule,
+    OrderSummaryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
