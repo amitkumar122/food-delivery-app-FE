@@ -26,7 +26,7 @@ export class OrderService {
 
   private handleError(error: any) {
     console.error('An error occurred:', error);
-    return throwError(error.message || error);
+    return error(error.message || error);
   }
 
 

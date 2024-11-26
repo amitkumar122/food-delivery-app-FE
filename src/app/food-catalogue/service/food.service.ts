@@ -16,13 +16,14 @@ export class FoodItemService {
     getFoodItemsByRestaurant(id:number): Observable<any> {
         return this.http.get<any>(`${this.apiUrl+id}`)
           .pipe(
-            catchError(this.handleError)
-          );
+             catchError(this.handleError)
+
+          );//.subscribe(res => this.Success(res), res => this.handleError(res));
       }
     
       private handleError(error: any) {
         console.error('An error occurred:', error);
-        return throwError(error.message || error);
+        return error(error.message || error);
       }
 
 }
